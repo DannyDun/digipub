@@ -1,4 +1,7 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+
+import LandingImage from "../../assets/DemoImage.png";
 
 const styles = {
   main: {
@@ -8,28 +11,28 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   imageComponent: {
     width: "700px",
     height: "500px",
-    margin: "100px 50px"
+    margin: "100px 50px",
   },
   headerComponent: {
     margin: "100px 50px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    width: "300px"
+    width: "300px",
   },
   headerTitle: {
     fontWeight: 600,
-    fontSize: 40
+    fontSize: 40,
   },
   headerPar: {
     margin: "25px 0",
     fontWeight: 100,
-    fontSize: 20
+    fontSize: 20,
   },
   button: {
     backgroundColor: "#3CADFF",
@@ -41,18 +44,14 @@ const styles = {
     margin: "10px 0",
     width: "70%",
     border: "none",
-    boxShadow: "0 0 10px #3CADFF"
-  }
+    boxShadow: "0 0 10px #3CADFF",
+  },
 };
 
 const LandingPage = () => {
   return (
     <div style={styles.main}>
-      <img
-        style={styles.imageComponent}
-        src={require("../../assets/DemoImage.png")}
-        alt="mainImage"
-      />
+      <img style={styles.imageComponent} src={LandingImage} alt="mainImage" />
       <div style={styles.headerComponent}>
         <h2 style={styles.headerTitle}>
           Split any song into its track components!
@@ -60,7 +59,9 @@ const LandingPage = () => {
         <p style={styles.headerPar}>
           Easily get vocals, drums, bass and other stems from your songs.
         </p>
-        <button style={styles.button}>Get Started</button>
+        <Button variant="contained" color="primary">
+          Get Started
+        </Button>
       </div>
     </div>
   );

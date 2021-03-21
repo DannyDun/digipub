@@ -7,31 +7,31 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 40
+    padding: 40,
   },
   leftDiv: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   logoStyle: {
     alignSelf: "flex-start",
     fontSize: "2rem",
     color: "white",
     textDecoration: "none",
-    marginRight: "80px"
+    marginRight: "80px",
   },
   textStyle: {
     display: "inline-block",
     padding: "10px 20px",
     fontSize: "1.3rem",
     color: "white",
-    textDecoration: "none"
+    textDecoration: "none",
   },
   loginStyle: {
     fontSize: "1.3rem",
-    color: "white"
-  }
+    color: "white",
+  },
 };
 
 const NavBar = () => {
@@ -39,7 +39,7 @@ const NavBar = () => {
     { label: "D | P", link: "#" },
     { label: "Learn More", link: "#" },
     { label: "Pricing", link: "#" },
-    { label: "Contact", link: "#" }
+    { label: "Contact", link: "#" },
   ];
 
   return (
