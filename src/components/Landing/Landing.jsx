@@ -11,7 +11,7 @@ const styles = {
     justifyContent: "center"
   },
   imageComponent: {
-    width: "600px",
+    width: "700px",
     height: "500px",
     margin: "100px 50px"
   },

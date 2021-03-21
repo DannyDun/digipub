@@ -7,7 +7,7 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: 20
+    padding: 40
   },
   leftDiv: {
     display: "flex",
@@ -18,27 +18,46 @@ const styles = {
     alignSelf: "flex-start",
     fontSize: "2rem",
     color: "white",
-    padding: "10 10 10 10"
+    textDecoration: "none",
+    marginRight: "80px"
   },
   textStyle: {
     display: "inline-block",
-    padding: "0 20",
+    padding: "10px 20px",
+    fontSize: "1.3rem",
+    color: "white",
+    textDecoration: "none"
+  },
+  loginStyle: {
     fontSize: "1.3rem",
     color: "white"
   }
 };
 
 const NavBar = () => {
+  const navComponents = [
+    { label: "D | P", link: "#" },
+    { label: "Learn More", link: "#" },
+    { label: "Pricing", link: "#" },
+    { label: "Contact", link: "#" }
+  ];
+
   return (
     <div style={styles.navStyle}>
       <div style={styles.leftDiv}>
-        <h1 style={styles.logoStyle}>D | P</h1>
-        <p style={styles.textStyle}>Learn More</p>
-        <p style={styles.textStyle}>Pricing</p>
-        <p style={styles.textStyle}>Contact</p>
+        {navComponents.map(({ link, label }) => (
+          <a
+            href={link}
+            style={label === "D | P" ? styles.logoStyle : styles.textStyle}
+          >
+            {label}
+          </a>
+        ))}
       </div>
       <div>
-        <p style={styles.textStyle}>Login</p>
+        <a style={styles.loginStyle} href="#">
+          Login
+        </a>
       </div>
     </div>
   );
