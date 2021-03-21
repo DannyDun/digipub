@@ -1,6 +1,8 @@
 import React from "react";
 
-const styles = {
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
   navStyle: {
     backgroundColor: "#1C1930",
     display: "flex",
@@ -32,7 +34,7 @@ const styles = {
     fontSize: "1.3rem",
     color: "white",
   },
-};
+});
 
 const NavBar = () => {
   const navComponents = [
@@ -41,21 +43,22 @@ const NavBar = () => {
     { label: "Pricing", link: "#" },
     { label: "Contact", link: "#" },
   ];
+  const styles = useStyles();
 
   return (
-    <div style={styles.navStyle}>
-      <div style={styles.leftDiv}>
+    <div className={styles.navStyle}>
+      <div className={styles.leftDiv}>
         {navComponents.map(({ link, label }) => (
           <a
             href={link}
-            style={label === "D | P" ? styles.logoStyle : styles.textStyle}
+            className={label === "D | P" ? styles.logoStyle : styles.textStyle}
           >
             {label}
           </a>
         ))}
       </div>
       <div>
-        <a style={styles.loginStyle} href="#">
+        <a className={styles.loginStyle} href="#">
           Login
         </a>
       </div>

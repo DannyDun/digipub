@@ -1,9 +1,10 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 
 import LandingImage from "../../assets/DemoImage.png";
 
-const styles = {
+const useStyles = makeStyles({
   main: {
     backgroundColor: "#1C1930",
     color: "white",
@@ -42,24 +43,31 @@ const styles = {
     color: "white",
     fontSize: "1.3rem",
     margin: "10px 0",
-    width: "70%",
     border: "none",
     boxShadow: "0 0 10px #3CADFF",
+    "&:hover": {
+      backgroundColor: "#3CADFF",
+    },
   },
-};
+});
 
 const LandingPage = () => {
+  const styles = useStyles();
   return (
-    <div style={styles.main}>
-      <img style={styles.imageComponent} src={LandingImage} alt="mainImage" />
-      <div style={styles.headerComponent}>
-        <h2 style={styles.headerTitle}>
+    <div className={styles.main}>
+      <img
+        className={styles.imageComponent}
+        src={LandingImage}
+        alt="mainImage"
+      />
+      <div className={styles.headerComponent}>
+        <h2 className={styles.headerTitle}>
           Split any song into its track components!
         </h2>
-        <p style={styles.headerPar}>
+        <p className={styles.headerPar}>
           Easily get vocals, drums, bass and other stems from your songs.
         </p>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" className={styles.button}>
           Get Started
         </Button>
       </div>
